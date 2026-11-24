@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Selkia</title>
+<meta name="description" content="Selkia ERP, Selkia Finance e Selkia Planner. Em breve.">
+<meta name="theme-color" content="#07080F">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080F;--fg:#F4F5F9;--mut:#9DA1BD;--line:rgba(157,161,189,.22)}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:Inter,"Segoe UI",Arial,sans-serif}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+main{position:relative;z-index:1;min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:48px max(24px,7vw);max-width:640px}
+.wm{height:44px;width:115px;display:block;margin-bottom:28px}
+h1{font-weight:500;font-size:clamp(22px,2.6vw,30px);line-height:1.3;margin:0 0 14px;letter-spacing:-.01em}
+p{color:var(--mut);font-size:15px;line-height:1.6;margin:0}
+.tag{align-self:flex-start;display:inline-block;margin-bottom:22px;padding:5px 12px;border:1px solid var(--line);border-radius:99px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.c{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+.c a{color:var(--fg);text-decoration:none}
+footer{position:fixed;z-index:1;left:max(24px,7vw);bottom:22px;font-size:11px;color:rgba(157,161,189,.6)}
+@media (max-aspect-ratio:6/5){main{justify-content:flex-end;padding-bottom:84px}}
+</style></head>
+<body><canvas id="c" aria-hidden="true"></canvas>
+<main>
+<svg class="wm" viewBox="140 0 293 112" role="img" aria-label="Selkia"><path transform="translate(140 -3)" fill="#F4F5F9" d="M33.9 98.9Q24.2 98.9 17.6 95.8Q10.9 92.7 7.4 87.2Q3.9 81.8 3.9 74.9H17.8Q17.8 77.8 19.4 80.5Q21 83.3 24.6 85Q28.1 86.7 33.9 86.7Q39.1 86.7 42.6 85.2Q46.1 83.7 47.8 81.2Q49.5 78.8 49.5 75.7Q49.5 71.8 46.2 69.4Q42.9 67.1 36 66.5L29.6 66Q19.1 65.1 12.9 59.4Q6.6 53.8 6.6 44.5Q6.6 37.5 9.9 32.4Q13.2 27.4 19.2 24.6Q25.1 21.9 33.1 21.9Q41.4 21.9 47.4 24.8Q53.4 27.7 56.7 33Q60 38.2 60 45.3H46.1Q46.1 42.3 44.7 39.8Q43.2 37.2 40.4 35.6Q37.5 34.1 33.1 34.1Q28.9 34.1 26.1 35.5Q23.3 36.9 21.9 39.3Q20.5 41.7 20.5 44.5Q20.5 47.9 23 50.5Q25.5 53 30.9 53.4L37.3 54Q45.1 54.6 51 57.3Q56.9 60 60.2 64.6Q63.4 69.2 63.4 75.7Q63.4 82.6 59.8 87.8Q56.2 93.1 49.6 96Q42.9 98.9 33.9 98.9Z M95.6 98.9Q88.6 98.9 83.4 96.5Q78.1 94.1 74.7 90Q71.2 86 69.5 81Q67.7 76 67.7 70.8V68.9Q67.7 63.5 69.5 58.5Q71.2 53.4 74.7 49.5Q78.1 45.5 83.2 43.1Q88.3 40.8 95 40.8Q103.8 40.8 109.8 44.6Q115.7 48.5 118.7 54.8Q121.7 61 121.7 68.2V73.2H73.6V64.7H113L108.7 68.9Q108.7 63.7 107.2 60Q105.7 56.3 102.7 54.3Q99.6 52.3 95 52.3Q90.4 52.3 87.2 54.4Q84 56.5 82.3 60.5Q80.7 64.4 80.7 69.9Q80.7 75 82.3 79Q83.9 82.9 87.2 85.2Q90.5 87.4 95.6 87.4Q100.7 87.4 103.9 85.3Q107.1 83.3 108 80.3H120.8Q119.6 85.9 116.2 90.1Q112.8 94.3 107.6 96.6Q102.3 98.9 95.6 98.9Z M130 97V24H143.9V97ZM123.2 34.4V24H143.9V34.4Z M193.8 97 175.6 71.6H167.5L190.6 42.7H205.1L183.8 69.4L184.1 62.4L209.5 97ZM155.8 97V24H169.7V97Z M216.1 97V42.7H230V97ZM208.5 53.1V42.7H230V53.1ZM221.2 36.2Q217.1 36.2 215.2 34Q213.2 31.9 213.2 28.6Q213.2 25.3 215.2 23.2Q217.1 21.1 221.2 21.1Q225.3 21.1 227.2 23.2Q229.1 25.3 229.1 28.6Q229.1 31.9 227.2 34Q225.3 36.2 221.2 36.2Z M274.9 97V80.9H272.6V63Q272.6 58.3 270.3 56Q268 53.7 263.2 53.7Q260.7 53.7 257.2 53.8Q253.7 53.9 250.2 54Q246.6 54.2 243.8 54.4V42.6Q246.1 42.4 249 42.2Q251.9 42 255 42Q258 41.9 260.7 41.9Q269.1 41.9 274.7 44.1Q280.2 46.3 283.1 51Q285.9 55.7 285.9 63.3V97ZM257.4 98.4Q251.5 98.4 247.1 96.3Q242.6 94.2 240.2 90.3Q237.7 86.4 237.7 80.9Q237.7 74.9 240.7 71.1Q243.6 67.3 249 65.4Q254.3 63.5 261.5 63.5H274.1V71.8H261.3Q256.5 71.8 254 74.2Q251.4 76.5 251.4 80.2Q251.4 83.9 254 86.2Q256.5 88.5 261.3 88.5Q264.2 88.5 266.7 87.5Q269.1 86.4 270.8 83.8Q272.4 81.3 272.6 76.9L276 80.8Q275.5 86.5 273.2 90.4Q271 94.3 267.1 96.3Q263.1 98.4 257.4 98.4Z"/></svg>
+<span class="tag">Em breve</span>
+<h1>Selkia ERP, Selkia Finance e Selkia Planner.</h1>
+<p>Gestão da empresa, das finanças e da rotina, em três aplicativos. Estamos finalizando os detalhes.</p>
+<div class="c">Contato: <a href="mailto:tiago.freitas@selkia.com.br">tiago.freitas@selkia.com.br</a></div>
+</main>
+<footer>© 2026 Selkia</footer>
+<script id="fs" type="x-shader/x-fragment">precision highp float;uniform vec2 uR;uniform float uT;uniform vec2 uM;uniform vec2 uO;uniform float uF;
+mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
+float smin(float a,float b,float k){float h=clamp(.5+.5*(b-a)/k,0.,1.);return mix(b,a,h)-k*h*(1.-h);}
+float band(float x,float a,float b,float f){return smoothstep(a-f,a,x)*(1.-smoothstep(b,b+f,x));}
+float map(vec3 p){
+ p.yz*=rot(uM.y*.45+.16*sin(uT*.31));p.xz*=rot(uM.x*.6+.22*sin(uT*.23));
+ float a=atan(p.y,p.x);
+ float ring=length(vec2(length(p.xy)-1.,p.z))-(.15+.024*sin(3.*a+uT*1.2)+.014*sin(7.*a-uT*1.3));
+ float x=clamp(p.x,-1.,1.);
+ float wy=.15*sin(3.2*x+uT*1.2)-.08;
+ float tube=(length(vec3(p.x-x,p.y-wy,p.z))-(.11+.02*sin(x*6.+uT*2.)))/1.25;
+ float d=smin(ring,tube,.17);
+ for(int i=0;i<3;i++){float f=float(i);float q=uT*(.45+.14*f)+f*2.1;
+  vec3 c=vec3(.8*sin(q),-.5+.6*sin(q*1.3+f),.28*cos(q*.9+f));
+  d=smin(d,length(p-c)-(.07+.028*f),.22);}
+ return d;}
+vec3 nrm(vec3 p){vec2 e=vec2(.0015,-.0015);return normalize(e.xyy*map(p+e.xyy)+e.yyx*map(p+e.yyx)+e.yxy*map(p+e.yxy)+e.xxx*map(p+e.xxx));}
+vec3 env(vec3 r){
+ vec3 c=mix(vec3(.02,.024,.05),vec3(.15,.16,.25),smoothstep(-.7,.9,r.y));
+ c+=vec3(1.)*band(r.y,.5,1.,.1)*band(r.x,-.55,.45,.18)*1.15;
+ c+=vec3(.86,.88,.97)*smoothstep(.82,.96,r.x)*band(r.y,-.4,.6,.2)*1.2;
+ c+=vec3(.62,.64,.76)*(1.-smoothstep(-.96,-.82,r.x))*.9;
+ c+=vec3(.6,.63,.78)*exp(-abs(r.y+.08)*36.)*.55;
+ return c;}
+vec3 bgc(vec2 uv,vec2 sv){vec3 c=mix(vec3(.027,.031,.059),vec3(.07,.075,.13),smoothstep(1.2,0.,length(uv)));c+=vec3(.2,.21,.33)*exp(-dot(uv,uv)*2.2)*.35;c*=.85+.15*sv.y;return c;}
+void main(){
+ vec2 uv=(gl_FragCoord.xy-.5*uR)/uR.y-uO;vec2 sv=gl_FragCoord.xy/uR;
+ vec3 ro=vec3(0.,0.,3.6),rd=normalize(vec3(uv,-uF));
+ float b=dot(ro,rd),h=b*b-dot(ro,ro)+2.89;
+ if(h<0.){gl_FragColor=vec4(bgc(uv,sv),1.);return;}
+ h=sqrt(h);float t=max(-b-h,0.),te=-b+h;bool hit=false;
+ for(int i=0;i<80;i++){float d=map(ro+rd*t);if(d<.0012){hit=true;break;}t+=d*.9;if(t>te)break;}
+ if(!hit){gl_FragColor=vec4(bgc(uv,sv),1.);return;}
+ vec3 p=ro+rd*t,n=nrm(p),v=-rd,rf=reflect(rd,n);
+ float fr=pow(1.-max(dot(n,v),0.),4.);
+ float ao=clamp(map(p+n*.12)/.12,0.,1.);
+ vec3 col=env(rf)*vec3(.9,.92,1.)*(.55+.45*ao)+vec3(.62,.64,.8)*fr*.55;
+ col=col/(1.+col*.3);
+ gl_FragColor=vec4(col,1.);}</script>
+<script>
+(function(){
+var c=document.getElementById('c'),gl=c.getContext('webgl',{antialias:false,powerPreference:'low-power'});
+if(!gl)return;
+function sh(t,s){var o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o}
+var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}'));
+gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,document.getElementById('fs').textContent));gl.linkProgram(pr);gl.useProgram(pr);
+var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+var l=gl.getAttribLocation(pr,'a');gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
+function U(n){return gl.getUniformLocation(pr,n)}var uR=U('uR'),uT=U('uT'),uM=U('uM'),uO=U('uO'),uF=U('uF');
+var ox=0,oy=0,f=1.22,sc=Math.min(window.devicePixelRatio||1,1.5);
+function layout(){var w=innerWidth,h=innerHeight,a=w/h;c.width=Math.round(w*sc);c.height=Math.round(h*sc);gl.viewport(0,0,c.width,c.height);
+ if(a>1.2){ox=a*.21;oy=0;f=.95}else{ox=0;oy=.27;f=1.05*Math.min(a,1)}}
+var mx=0,my=0,tx=0,ty=0;addEventListener('mousemove',function(e){tx=(e.clientX/innerWidth-.5)*.5;ty=(e.clientY/innerHeight-.5)*.4});
+function draw(t){gl.uniform2f(uR,c.width,c.height);gl.uniform1f(uT,t);gl.uniform2f(uM,mx-.1,my+.06);gl.uniform2f(uO,ox,oy);gl.uniform1f(uF,f);gl.drawArrays(gl.TRIANGLES,0,3)}
+layout();addEventListener('resize',function(){layout();if(still)draw(2.6)});
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches;if(still){draw(2.6);return}
+var t0=performance.now(),last=0,run=true;
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(loop)});
+function loop(now){if(!run)return;requestAnimationFrame(loop);if(now-last<33)return;last=now;mx+=(tx-mx)*.04;my+=(ty-my)*.04;draw(2.6+(now-t0)/1000)}
+requestAnimationFrame(loop);
+})();
+</script>
+
+</body></html>
