@@ -16,8 +16,9 @@ p{color:var(--mut);font-size:15px;line-height:1.6;margin:0}
 .tag{align-self:flex-start;display:inline-block;margin-bottom:22px;padding:5px 12px;border:1px solid var(--line);border-radius:99px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
 .c{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
 .c a{color:var(--fg);text-decoration:none}
-footer{position:fixed;z-index:1;left:max(24px,7vw);bottom:22px;font-size:11px;color:rgba(157,161,189,.6)}
-@media (max-aspect-ratio:6/5){main{justify-content:flex-end;padding-bottom:84px}}
+.apps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:16px}.apps li{padding-left:14px;border-left:1px solid var(--line)}.apps b{display:block;font-weight:500;font-size:14px;color:var(--fg);margin-bottom:3px}.apps span{font-size:13px;line-height:1.55;color:var(--mut)}
+.c{display:grid;gap:4px}footer{margin-top:28px;font-size:11px;line-height:1.6;color:rgba(157,161,189,.6)}
+@media (max-aspect-ratio:6/5){main{justify-content:flex-start;padding-top:44vh;padding-bottom:40px}}
 </style></head>
 <body><canvas id="c" aria-hidden="true"></canvas>
 <main>
@@ -25,9 +26,10 @@ footer{position:fixed;z-index:1;left:max(24px,7vw);bottom:22px;font-size:11px;co
 <span class="tag">Em breve</span>
 <h1>Selkia ERP, Selkia Finance e Selkia Planner.</h1>
 <p>Gestão da empresa, das finanças e da rotina, em três aplicativos. Estamos finalizando os detalhes.</p>
-<div class="c">Contato: <a href="mailto:tiago.freitas@selkia.com.br">tiago.freitas@selkia.com.br</a></div>
+<ul class="apps"><li><b>Selkia Finance</b><span>Finanças pessoais: orçamento do mês, previsão com o que já aconteceu e o que está por vir, e uma resposta antes de gastar: cabe, cabe com ressalvas ou não deveria.</span></li><li><b>Selkia Planner</b><span>Plano semanal com tarefas ligadas a clientes, delegação e o Outlook dentro do app.</span></li><li><b>Selkia ERP</b><span>Gestão da empresa, com várias empresas e acesso por perfil. A venda registrada uma vez gera título, caixa e contabilidade.</span></li></ul>
+<div class="c"><span>Suporte: <a href="mailto:suporte@selkia.com.br">suporte@selkia.com.br</a></span><span>Privacidade: <a href="mailto:privacidade@selkia.com.br">privacidade@selkia.com.br</a></span></div>
+<footer>Selkia é uma marca da EONE Tecnologia e Gestão Ltda · CNPJ 68.798.845/0001-08 · São Paulo/SP<br>© 2026 Selkia</footer>
 </main>
-<footer>© 2026 Selkia</footer>
 <script id="fs" type="x-shader/x-fragment">precision highp float;uniform vec2 uR;uniform float uT;uniform vec2 uM;uniform vec2 uO;uniform float uF;
 mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
 float smin(float a,float b,float k){float h=clamp(.5+.5*(b-a)/k,0.,1.);return mix(b,a,h)-k*h*(1.-h);}
